@@ -1,6 +1,13 @@
 import './App.css';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Row, Col, Typography } from 'antd';
 import 'antd/dist/antd.css';
+import {
+  MailFilled,
+  YoutubeFilled,
+  TwitterSquareFilled,
+  InstagramFilled,
+  FacebookFilled,
+} from '@ant-design/icons';
 
 function App() {
   return (
@@ -24,7 +31,30 @@ function App() {
         <div className="site-layout-content">Content</div>
       </Layout.Content>
       <Layout.Footer style={{ textAlign: 'center' }}>
-        Created by Sara and Ana
+        <Row>
+          <Col span={8}>
+            <Typography.Title level={3}>Kontaktirajte nas</Typography.Title>
+            <Typography.Title level={5}>IGP „COSIA“ d.o.o.</Typography.Title>
+            <Typography.Title level={5}>Nikole Tesle bb,</Typography.Title>
+            <Typography.Title level={5}>
+              81400 Nikšić, Crna Gora
+            </Typography.Title>
+            <Typography.Title level={5}>
+              +382 (0) 40 62 11 40 / 7-15h
+            </Typography.Title>
+            <Typography.Title level={5}>office@cosia.me</Typography.Title>
+            <Typography.Title level={5}>www.cosia.me</Typography.Title>
+          </Col>
+        </Row>
+        <Row style={{ fontSize: 'xx-large' }} gutter={24}>
+          <Col span={8}>
+            <MailFilled />
+            <FacebookFilled />
+            <InstagramFilled />
+            <TwitterSquareFilled />
+            <YoutubeFilled />
+          </Col>
+        </Row>
       </Layout.Footer>
     </Layout>
   );
